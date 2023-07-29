@@ -1,2 +1,13 @@
-<h1>Hello world</h1>
-<p>Lorem ipsum</p>
+<form action="/task/add" method="POST">
+    <div>
+        <label for="title">Escribe un titulo</label>
+        <input type="text" name="title" placeholder="title" id="title" />
+    </div>
+
+    <div>
+        <label for="description">Descripion:</label>
+        <textarea name="description" placeholder="description" id="description"></textarea>
+    </div>
+
+    <button>Agregar</button>
+</form>
