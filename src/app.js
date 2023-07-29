@@ -14,6 +14,7 @@ app.engine('.hbs', engine({
 }));
 
 app.set('view engine', '.hbs');
+
 // Routes
 app.use(indexRoutes);
 
