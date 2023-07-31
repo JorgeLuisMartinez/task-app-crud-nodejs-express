@@ -12,9 +12,13 @@
             <td>{{title}}</td>
             <td>{{description}}</td>
             <td>
-                <button>Done</button>
-                <a href="/delete/{{_id}}">Delete</a>
-                <a href="/edit/{{_id}}">Edit</a>
+                {{#if done}}
+                    <a href="/task/{{_id}}/toggleDone">✅</a>
+                {{else}}
+                    <a href="/task/{{_id}}/toggleDone">❌</a>
+                {{/if}}
+                <a href="/task/{{_id}}/delete">Delete</a>
+                <a href="/task/{{_id}}/edit">Edit</a>
             </td>
         </tr>
         {{/each}}
