@@ -1,7 +1,18 @@
-<form action="/task/{{task._id}}/edit" method="post">
-    <input type="text" name="title" placeholder="Title" value="{{task.title}}">
+<div class="container">
+    <div class="row">
+        <div class="col-md-5 offset-md-3">
+            <div class="card card-body p-4 rounded-0 bg-dark text-white">
+                <h1>Edit Task</h1>
+                <form action="/task/{{task._id}}/edit" method="post">
+                    <div class="mb-2">
+                        <input type="text" name="title" placeholder="Title" value="{{task.title}}" class="form-control rounded-0 bg-dark text-white">
+                    </div>
+                    
+                    <textarea name="description" rows="3" placeholder="Add a description" class="form-control rounded-0 bg-dark text-white">{{task.description}}</textarea>
 
-    <textarea name="description" rows="3" placeholder="Add a description">{{task.description}}</textarea>
-
-    <button>Save</button>
-</form>
+                    <button class="btn btn-primary btn-sm mt-3">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

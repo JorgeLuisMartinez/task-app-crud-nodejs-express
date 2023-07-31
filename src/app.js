@@ -25,3 +25,6 @@ app.use(indexRoutes);
 
 // exports
 export default app;
+
+// static files
+app.use(express.static(path.join(__dirname, 'static')));
